@@ -6,6 +6,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-PostGIS%20%2B%20Timescale-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org)
 [![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-4CAF50?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 A full-stack logistics and delivery platform built for merchants, delivery riders, and operations teams in Bangladesh. It handles the entire lifecycle: parcel booking, real-time rider tracking, turn-by-turn navigation, cash-on-delivery (COD) reconciliation, and merchant settlements.
 
@@ -76,4 +77,4 @@ cd ../mobileapp_merchant && flutter test
 
 ## License
 
-Internal project of Grameen Innovation Lab. All rights reserved.
+This project is licensed under the [MIT License](LICENSE).
