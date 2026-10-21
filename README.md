@@ -16,9 +16,10 @@ A full-stack logistics and delivery platform built for merchants, delivery rider
 
 ```
 grameen-delivery/
-├── mobileapp/             # Grameen Delivery Rider (Flutter mobile app for drivers)
-├── mobileapp_merchant/    # Grameen Delivery Merchant (Flutter mobile app for shop owners)
-├── mobileapp_shared/      # Shared core package (theme, models, widgets, localization)
+├── mobile/
+│   ├── rider/             # Grameen Delivery Rider (Flutter mobile app for drivers)
+│   ├── merchant/          # Grameen Delivery Merchant (Flutter mobile app for shop owners)
+│   └── shared/            # Shared core package (theme, models, widgets, localization)
 ├── backend/               # NestJS API (Postgres, PostGIS, Kafka, Redis, WebSockets)
 └── frontend/              # React operations dashboard for admins and dispatchers
 ```
@@ -40,14 +41,14 @@ Both apps share brand styling, BDT (`৳`) currency formatters, bilingual locali
 
 ### 1. Run the Rider App
 ```bash
-cd mobileapp
+cd mobile/rider
 flutter pub get
 flutter run
 ```
 
 ### 2. Run the Merchant App
 ```bash
-cd mobileapp_merchant
+cd mobile/merchant
 flutter pub get
 flutter run
 ```
@@ -68,9 +69,9 @@ cd frontend && npm install && npm start
 All mobile packages come with automated tests:
 
 ```bash
-cd mobileapp_shared && flutter test
-cd ../mobileapp && flutter test
-cd ../mobileapp_merchant && flutter test
+cd mobile/shared && flutter test
+cd ../rider && flutter test
+cd ../merchant && flutter test
 ```
 
 ---

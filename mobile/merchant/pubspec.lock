@@ -139,7 +139,7 @@ packages:
   mobileapp_shared:
     dependency: "direct main"
     description:
-      path: "../mobileapp_shared"
+      path: "../shared"
       relative: true
     source: path
     version: "0.0.1"
