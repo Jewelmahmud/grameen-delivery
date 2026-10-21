@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editable Map with Leaflet and OSM</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 90vh; }
+    #saveData { margin: 10px; }
+  </style>
+</head>
+<body>
+
+<h3 style="text-align:center;">Editable Rural Map – Add Custom Locations</h3>
+<div id="map"></div>
+<button id="saveData">Save Locations (Console)</button>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Initialize map
+  const map = L.map('map').setView([24.0000, 89.0000], 13); // Example: Natore region
+
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Store markers
+  const customMarkers = [];
+
+  // Add marker on click
+  map.on('click', function(e) {
+    const marker = L.marker(e.latlng, { draggable: true }).addTo(map);
+    marker.bindPopup("Custom Location").openPopup();
+
+    // Save to array
+    customMarkers.push(marker);
+
+    // Update position if marker dragged
+    marker.on('dragend', function() {
+      console.log('Updated position:', marker.getLatLng());
+    });
+  });
+
+  // Button to "save" all markers (here: logs to console)
+  document.getElementById('saveData').addEventListener('click', function() {
+    const data = customMarkers.map(marker => {
+      const { lat, lng } = marker.getLatLng();
+      return { lat, lng };
+    });
+    console.log("📌 Custom Locations:", JSON.stringify(data, null, 2));
+    alert("Custom locations printed in console!");
+  });
+</script>
+
+</body>
+</html>

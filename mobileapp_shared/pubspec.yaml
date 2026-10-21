@@ -1,0 +1,20 @@
+name: mobileapp_shared
+description: "Grameen Delivery shared core package containing theme, models, widgets, and constants."
+version: 0.0.1
+publish_to: 'none'
+
+environment:
+  sdk: ^3.9.0-0
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:

@@ -1,0 +1,166 @@
+.services-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.page-banner {
+  background: var(--primary-color);
+  color: var(--light-text);
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.page-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.page-banner-left {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.banner-description {
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-tagline {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  padding: 30px;
+  text-align: center;
+  background: var(--primary-color);
+  color: white;
+}
+
+.service-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.service-title {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service-title .en {
+  font-family: var(--font-en);
+}
+
+.service-title .bn {
+  font-family: var(--font-bn);
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.service-description {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-description .en {
+  font-family: var(--font-en);
+}
+
+.service-description .bn {
+  font-family: var(--font-bn);
+  font-size: 0.9em;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--text-color);
+}
+
+.service-features li:before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .page-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .banner-description {
+    margin-top: 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+} 

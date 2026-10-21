@@ -1,0 +1,35 @@
+name: grameen_delivery_merchant
+description: "Grameen Delivery Merchant mobile application for store owners and business partners."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0-0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  mobileapp_shared:
+    path: ../mobileapp_shared
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/logo.png
+    - assets/images/bg.jpg
+
+  fonts:
+    - family: Kalpurush
+      fonts:
+        - asset: assets/fonts/kalpurush.ttf
+          weight: 400
